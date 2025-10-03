@@ -18,12 +18,14 @@ namespace HospitalJordi
         public int TelefonoDepa { get => telefonoDepa; set => telefonoDepa = value; }
         public int Planta { get => planta; set => planta = value; }
 
-        public Departamento(int telefonoDepa, int planta, string nombreDepa)
+        public Departamento(string nombreDepa, int telefonoDepa, int planta)
         {
+            this.nombreDepa = nombreDepa;
             this.telefonoDepa = telefonoDepa;
             this.planta = planta;
-            this.nombreDepa = nombreDepa;
         }
+
+
 
     }
 }
