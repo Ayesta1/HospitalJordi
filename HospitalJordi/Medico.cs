@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HospitalJordi
 {
-    internal class Medico
+    internal class Medico : Persona
     {
+        string especialidad;
+
+        public Medico(string nombre, string apellido, int edad) : base(nombre, apellido, edad)
+        {
+        }
     }
 }
