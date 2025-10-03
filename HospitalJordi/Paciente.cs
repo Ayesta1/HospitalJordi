@@ -51,5 +51,10 @@ namespace HospitalJordi
         {
             this.DolenciaActual = tipoDolencia;
         }
+        public override string ToString()
+        {
+            return $"[PACIENTE] {Nombre} {Apellido}, {Edad} años. " +
+               $"Motivo: {DolenciaActual.ToString().Replace("_", " ")}. ";
+        }
     }
 }

@@ -57,13 +57,24 @@ namespace HospitalJordi
     }
     internal class Medico : Persona
     {
-
         public eEspecialidadMedico Especialidad { get; set; }
-
         public Medico(string nombre, string apellido, int edad, eEspecialidadMedico especialidad)
             : base(nombre, apellido, edad)
         {
             this.Especialidad = especialidad;
+        }
+        public override string ToString()
+        {
+            // 1. Obtener la instancia del departamento asociada a la especialidad del médico.
+            Departamento infoDepartamento = Departamento.ObtenerPorEspecialidad(this.Especialidad);
+
+            // 2. Usar las propiedades de esa instancia.
+            string nombreDepartamento = infoDepartamento.Nombre;
+            int planta = infoDepartamento.Planta;
+
+            return $"[MÉDICO] Dr./Dra. {Nombre} {Apellido}, {Edad} años. " +
+                   $"Especialidad: {Especialidad.ToString().Replace("_", " ")}. " +
+                   $"Ubicación: {nombreDepartamento} (Planta {planta}).";
         }
     }
 }

@@ -11,6 +11,7 @@ namespace HospitalJordi
         private static List<Persona> Personas = new List<Persona>();
         static void Main(string[] args)
         {
+            Departamento.CargarDepartamentos();
         }
     }
 }
