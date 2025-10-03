@@ -8,6 +8,7 @@ namespace HospitalJordi
 {
     internal class Program
     {
+        private static List<Persona> Personas = new List<Persona>();
         static void Main(string[] args)
         {
         }
